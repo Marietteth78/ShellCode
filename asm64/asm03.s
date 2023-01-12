@@ -5,7 +5,7 @@ section .data
 motdepasse db '42'
 motdepasselen: equ $-motdepasse
 
-str: times 5 db 0,0  ; Allocate buffer of 5 bytes
+str times 5 db 0,0  ; Allocate buffer of 5 bytes
 strlen: equ $ - str
 
 output db 'Entrez le nombre 42 pour return 1',0x0a,10
