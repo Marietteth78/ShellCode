@@ -7,7 +7,7 @@ section .data
 	strlen: equ $ - str
 
 	output db 'Entrez 42 pour return 1',0x0a,10
-	outputlen equ $-output
+	outputlen: equ $-output
 	
 section .text
 	global _start
