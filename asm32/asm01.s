@@ -1,3 +1,5 @@
+bit 32
+
 global _start	
 section .text
 	
