@@ -6,7 +6,7 @@ section .data
 	str: times 5 db 0,0  ; Allocate buffer of 5 bytes
 	strlen: equ $ - str
 
-	output db 'Entrez 42 pour return 1',0x0a,10
+	output: db 'Entrez 42 pour return 1',0x0a,10
 	outputlen: equ $-output
 	
 section .text
