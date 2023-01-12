@@ -17,6 +17,10 @@ succeslen: equ $-succes
 erreur db 'Dommage',0x0a,10
 erreurlen: equ $-erreur
 
+nombre db '1337', 10
+nombrelen: equ $-nombre
+ 
+
 section .bss
 	
 
@@ -53,6 +57,13 @@ _start:
 	mov rsi, succes
 	mov rdx, succeslen
 	syscall
+	
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, nombre
+	mov rdx, nombrelen
+	syscall
+	
 	jmp exit1
 	
 	_nonequal:
@@ -62,6 +73,7 @@ _start:
 	mov rdx, erreurlen
 	syscall
 	jmp exit0
+	
 	
 	
 exit0:	mov rax, 60
