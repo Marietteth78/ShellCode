@@ -13,4 +13,7 @@ cat messagebox.bin | msfvenom -p - -a x86 --platform linux -e x86/shikata_ga_nai
 
 //--platform win Spécifie la plate-forme comme linux
 
+// en 64 bits on a :
+//Commande :
 
+cat messagebox.bin | msfvenom -p - -a x64 --platform linux -e x64/shikata_ga_nai -fc -b '\x00'
